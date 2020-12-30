@@ -6,7 +6,12 @@ class Problem {
      * separated by single spaces.
      */
     wordCount(input) {
-        // code goes here
+        // create a variable to hold the output and start at 1
+        // create a loop the runs through the string
+        // start loop at begining of string
+        // have the loop check for empty spaces
+        // each space, add 1 to the output.
+        // end loop at the end of the given string
         return null;
     }
 

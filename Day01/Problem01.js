@@ -12,6 +12,7 @@ class Problem {
         // have the loop check for empty spaces
         // each space, add 1 to the output.
         // end loop at the end of the given string
+        // return variable that was created for output
         return null;
     }
 

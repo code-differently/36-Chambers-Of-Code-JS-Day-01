@@ -62,6 +62,12 @@ class Problem {
      */
 
     firstReverse(input){
+        // create variable to hold output
+        // create a loop the starts at begining of string; ends at the end of string
+        // reverse the order of the string
+        // add to variable
+        // return output
+
         return null;
     }
 
@@ -72,7 +78,12 @@ class Problem {
      * input will not be empty.
      */
     longestWord(input) {
-        // code goes here
+        // create variable to contain output
+        // create a loop togo through each character
+        // split each word by space
+        // create conditional to compare .length of each word
+        // conditional for 2 + words
+        // retunr output
         return null;
     }
 
@@ -82,7 +93,12 @@ class Problem {
      * Let numbers and symbols stay the way they are.
      */
     swapCase(str) {
-        // code goes here
+        // create string variable to contain output
+        // create loop that goes through string
+        // check if character is lower or upper
+        // change character to opposite
+        // add change characters to variable along with numbers & symbols
+        // return string variable
         return null;
     }
 

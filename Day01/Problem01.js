@@ -5,15 +5,21 @@ class Problem {
      * (e.g. "Never eat shredded wheat or cake" would return 6). Words will be
      * separated by single spaces.
      */
-    wordCount(input) {
+    wordCount(input){
         // create a variable to hold the output and start at 1
+        let output = 1
         // create a loop the runs through the string
+        for(let i = 0; i < input.length; i ++){
         // start loop at begining of string
         // have the loop check for empty spaces
+            if(input[i-1] === " "){
         // each space, add 1 to the output.
+                output += 1
+            }
         // end loop at the end of the given string
+        }
         // return variable that was created for output
-        return null;
+        return output
     }
 
 
@@ -23,7 +29,27 @@ class Problem {
     * 
     */
     letterCapitalize(str) {
-        return null;
+        // create a variable to contain output
+        let output = ""
+        // create a loop to go through the string
+        for(let i = 0; i < str.length; i ++){
+        // capitalize first index
+            if(i === 0){
+                output += str[i].toUpperCase()
+        // add to variable
+            }
+            else if (str[i-1] === " "){
+        // capitalize the index after each space
+        // add to variable
+                output += str[i-1].toUpperCase()
+            }
+            else {
+                output += str[i]
+            }
+
+        }
+        // return the output
+        return output;
     }
 
 

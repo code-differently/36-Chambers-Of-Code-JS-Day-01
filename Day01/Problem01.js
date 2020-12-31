@@ -15,6 +15,7 @@ class Problem {
             if(input[i-1] === " "){
         // each space, add 1 to the output.
                 output += 1
+                console.log(output)
             }
         // end loop at the end of the given string
         }
@@ -41,7 +42,7 @@ class Problem {
             else if (str[i-1] === " "){
         // capitalize the index after each space
         // add to variable
-                output += str[i-1].toUpperCase()
+                output += str[i].toUpperCase()
             }
             else {
                 output += str[i]

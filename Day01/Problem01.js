@@ -7,7 +7,9 @@ class Problem {
      */
     wordCount(input) {
         // code goes here
-        return null;
+        let inputArray = input.split(" ");  //  split input into array of wordd instead of characters
+        let stringWords = inputArray.length;  // counts the number of words in the array
+        return stringWords;  // returns the number of words
     }
 
 
@@ -17,7 +19,12 @@ class Problem {
     * 
     */
     letterCapitalize(str) {
-        return null;
+        let inputArray = str.split(" ");  // split str into array of words instead of characters
+        for (let i = 0; i < inputArray.length; i++) {  // step thru array by word
+            let indexPosition = inputArray[i];  // each index position is a word
+        inputArray[i] = indexPosition[0].toUpperCase() + indexPosition.substring(1);  // capitalize 1st character of word, then concatenates the remaining characters of the word
+    }
+    return inputArray.join(" ");
     }
 
 
@@ -28,8 +35,9 @@ class Problem {
      * program should return the string sredoC dna dlroW olleH.
      */
 
-    firstReverse(input){
-        return null;
+    firstReverse(input) {
+        // code goes here
+        return input.split("").reverse().join("");  // splits input into individuals elements, flips order & concatenates them
     }
 
     /**
@@ -40,7 +48,16 @@ class Problem {
      */
     longestWord(input) {
         // code goes here
-        return null;
+        var str = input.split(/[^a-zA-Z]/);  // splits string into words & ignores non-letters
+        var longest = 0; 
+        var word = str;
+        for (var i = 0; i <= str.length - 1; i++) {  // steps thru array & adjusts count to begin at 0  
+            if (longest < str[i].length) {  // compares current longest with word in the array
+                longest = str[i].length;  // longest word is replaced with new longest word
+                word = str[i];  // word is now the longest word
+            }
+        }
+        return word;
     }
 
     /**
@@ -50,7 +67,15 @@ class Problem {
      */
     swapCase(str) {
         // code goes here
-        return null;
+        var switchCase = "";  // create a new variable 
+        for (var i = 0; i < str.length; i++) {  // steps thru array
+            if (str[i] === str[i].toLowerCase()) {  // if position is lowercase, switch to uppercase
+                switchCase += str[i].toUpperCase();
+            } else {  // otherwise, it must be uppercase, therefore
+                switchCase += str[i].toLowerCase();  //  switch to lowercase & advance to the next position
+            }
+        }
+        return switchCase;
     }
 
 }

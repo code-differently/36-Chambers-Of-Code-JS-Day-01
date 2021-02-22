@@ -7,17 +7,27 @@ class Problem {
      */
     wordCount(input) {
         // code goes here
-        return null;
+        //separate input sentence into Words
+        let words = input.split(" ");
+
+        return words.length;
     }
 
 
     /**
-     * Have the function LetterCapitalize(str) take the str parameter being passed and capitalize the first 
+     * Have the function LetterCapitalize(str) take the str parameter being passed and capitalize the first
      letter of each word. Words will be separated by only one space.
-    * 
+    *
     */
     letterCapitalize(str) {
-        return null;
+    let words = str.split(" ");
+    let sentence = "";
+    let newWord ="";
+    for(let i = 0; i< words.length; i++){
+         newWord = words[i].charAt(0).toUpperCase()+ words[i].substr(words[i].charAt(1), (words[i].length) - 1) + " ";
+         sentence +=  newWord;
+    }
+        return sentence;
     }
 
 

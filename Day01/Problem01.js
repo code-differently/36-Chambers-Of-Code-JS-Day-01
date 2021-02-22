@@ -6,20 +6,26 @@ class Problem {
      * separated by single spaces.
      */
     wordCount(input) {
-        // code goes here
-        return null;
+       return input.split(" ").length;
     }
-
+ 
 
     /**
      * Have the function LetterCapitalize(str) take the str parameter being passed and capitalize the first 
      letter of each word. Words will be separated by only one space.
     * 
     */
-    letterCapitalize(str) {
-        return null;
-    }
+    // letterCapitalize(str) {
+    //     return str.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase());
+    // }
 
+    letterCapitalize(str){
+        str = str.split(" ");
+            for (let i = 0; i < str.length; i++) {
+            str[i] = str[i][0].toUpperCase() + str[i].substr(1);
+        }
+        return str.join(" ");
+    }
 
 
     /**
@@ -28,8 +34,17 @@ class Problem {
      * program should return the string sredoC dna dlroW olleH.
      */
 
+    
+    //  firstReverse(input){
+    //     return input.split("").reverse().join("");
+    // }
+
     firstReverse(input){
-        return null;
+        let tempString = "";
+        for (let i = input.length - 1; i >= 0; i--) {
+            tempString += input[i];
+        }
+        return tempString;
     }
 
     /**
@@ -39,9 +54,17 @@ class Problem {
      * input will not be empty.
      */
     longestWord(input) {
-        // code goes here
-        return null;
+        let longest = "";
+        input = input.replace(/[^a-zA-Z0-9]/gi, " ");
+        input = input.split(" ");
+         for (let i = 0; i < input.length; i++) {
+            if (input[i].length > longest.length) {
+                longest = input[i];
+            }
+         }
+        return longest;
     }
+
 
     /**
      * Have the swapCase(String input) take the input parameter and swap the case of each
@@ -49,10 +72,17 @@ class Problem {
      * Let numbers and symbols stay the way they are.
      */
     swapCase(str) {
-        // code goes here
-        return null;
+        return str.replace( /\w/g, function(swap) {
+            if (swap === swap.toLowerCase()) {
+              return swap.toUpperCase();
+            } else {
+              return swap.toLowerCase();
+            }
+          });
+    
     }
 
 }
+
 
 module.exports = Problem;

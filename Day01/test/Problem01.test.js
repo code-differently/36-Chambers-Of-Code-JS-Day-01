@@ -1,5 +1,5 @@
 const { TestScheduler } = require('jest');
-const Problem = require('./Problem01');
+const Problem = require('../Problem01');
 
 test("wordCountTest test01", () => {
 

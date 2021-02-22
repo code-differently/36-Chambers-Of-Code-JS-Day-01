@@ -22,12 +22,13 @@ class Problem {
     letterCapitalize(str) {
     let words = str.split(" ");
     let sentence = "";
-    let newWord ="";
+
     for(let i = 0; i< words.length; i++){
-         newWord = words[i].charAt(0).toUpperCase()+ words[i].substr(words[i].charAt(1), (words[i].length) - 1) + " ";
-         sentence +=  newWord;
+         words[i] = words[i].charAt(0).toUpperCase()+ words[i].substr(1);
     }
-        return sentence;
+
+    sentence = words.join(" ");
+    return sentence;
     }
 
 

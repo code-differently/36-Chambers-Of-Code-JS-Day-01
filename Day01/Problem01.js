@@ -7,7 +7,8 @@ class Problem {
      */
     wordCount(input) {
         // code goes here
-        return null;
+        return input.split(" ").length;
+        
     }
 
 
@@ -17,9 +18,16 @@ class Problem {
     * 
     */
     letterCapitalize(str) {
-        return null;
-    }
+        
+        let words = str.split(" ");
 
+        for (let i = 0; i < words.length; i++) {
+            words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+        }
+
+        return words.join(" ");
+
+    }
 
 
     /**
@@ -29,7 +37,9 @@ class Problem {
      */
 
     firstReverse(input){
-        return null;
+        
+        return input.split("").reverse().join("");
+        
     }
 
     /**
@@ -39,8 +49,15 @@ class Problem {
      * input will not be empty.
      */
     longestWord(input) {
-        // code goes here
-        return null;
+        let long = "";
+        input = input.replace(/[^a-zA-Z0-9]/gi, " ");
+        input = input.split(" ");
+         for (let i = 0; i < input.length; i++) {
+            if (input[i].length > long.length) {
+                long = input[i];
+            }
+         }
+        return long;
     }
 
     /**
@@ -49,8 +66,17 @@ class Problem {
      * Let numbers and symbols stay the way they are.
      */
     swapCase(str) {
-        // code goes here
-        return null;
+        let newString = "";
+        for (let i = 0; i < str.length; i++) {
+            if (str[i] === str[i].toLowerCase()) {
+                newString += str[i].toUpperCase();
+            } else {
+                newString += str[i].toLowerCase();
+            }
+        }
+        
+        return newString;
+
     }
 
 }

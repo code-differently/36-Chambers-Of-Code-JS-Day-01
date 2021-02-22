@@ -6,8 +6,7 @@ class Problem {
      * separated by single spaces.
      */
     wordCount(input) {
-        // code goes here
-        return null;
+        return input.split(" ").length;
     }
 
 
@@ -17,7 +16,8 @@ class Problem {
     * 
     */
     letterCapitalize(str) {
-        return null;
+      
+        return  str.split(" ").map( i =>{return (i.charAt(0).toUpperCase() + i.slice(1))}).join(" ");
     }
 
 
@@ -29,7 +29,7 @@ class Problem {
      */
 
     firstReverse(input){
-        return null;
+        return input.split(" ").map(i => {return i.split("").reverse().join("")}).reverse().join(" ");
     }
 
     /**
@@ -40,7 +40,10 @@ class Problem {
      */
     longestWord(input) {
         // code goes here
-        return null;
+        var arr = input.replace(/[^a-zA-Z ]/g,"").split(" ");
+  
+        arr.sort(function(a,b) { return b.length - a.length } );
+        return arr.shift();
     }
 
     /**
@@ -50,7 +53,7 @@ class Problem {
      */
     swapCase(str) {
         // code goes here
-        return null;
+        return str.split("").map(l=>l==l.toLowerCase()?l.toUpperCase():l.toLowerCase()).join("");
     }
 
 }

@@ -6,8 +6,8 @@ class Problem {
      * separated by single spaces.
      */
     wordCount(input) {
-        // code goes here
-        return null;
+        const inputArr = input.split(' ');
+        return inputArr.length;
     }
 
 
@@ -17,7 +17,11 @@ class Problem {
     * 
     */
     letterCapitalize(str) {
-        return null;
+        let arr = str.split(' ');
+        for (let i=0; i<arr.length; i++) {
+            arr[i] = arr[i].substring(0,1).toUpperCase() + arr[i].substring(1,arr[i].length);
+        }
+        return arr.join(' ');
     }
 
 
@@ -29,7 +33,10 @@ class Problem {
      */
 
     firstReverse(input){
-        return null;
+        const arr = input.split('');
+        arr.reverse();
+        const output = arr.join('');
+        return output;
     }
 
     /**
@@ -39,8 +46,14 @@ class Problem {
      * input will not be empty.
      */
     longestWord(input) {
-        // code goes here
-        return null;
+        const arr = input.split(' ');
+        let longest = 0;
+        for (let i=1; i<arr.length; i++) {
+            if (arr[longest].replace(/([a-zA-Z]+)(.*)/, '$1').length < arr[i].replace(/([a-zA-Z]+)(.*)/, '$1').length) {
+                longest = i;
+            }
+        }
+        return arr[longest];
     }
 
     /**
@@ -50,7 +63,17 @@ class Problem {
      */
     swapCase(str) {
         // code goes here
-        return null;
+        let output = '';
+        for (let i=0; i<str.length; i++) {
+            if (str.charCodeAt(i) >= 65 && str.charCodeAt(i) <= 90) {
+                output += String.fromCharCode(str.charCodeAt(i) + 32);
+            } else if (str.charCodeAt(i) >= 97 && str.charCodeAt(i) <= 122) {
+                output += String.fromCharCode(str.charCodeAt(i) - 32);
+            } else {
+                output += str[i]
+            }
+        }
+        return output;
     }
 
 }

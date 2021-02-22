@@ -83,7 +83,17 @@ class Problem {
      */
     swapCase(str) {
         // code goes here
-        return null;
+    let letters = str.split("");
+
+    for(let i = 0; i<letters.length; i++){
+        if(letters[i] === letters[i].toLowerCase()){
+            letters[i] = letters[i].toUpperCase();
+        } else {
+            letters[i] = letters[i].toLowerCase();
+        }
+    }
+
+    return letters.join("");
     }
 
 }

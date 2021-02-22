@@ -6,7 +6,7 @@ test("wordCountTest test01", () => {
     let problem = new Problem();
     let expected = 2;
 
-    let actual = problem.wordCount("Hello World");
+    let actual = problem.wordCount("G0 BROWNS!");
 
     expect(actual).toEqual(expected);
 });
@@ -16,7 +16,7 @@ test("wordCountTest test02", () => {
     let problem = new Problem();
     let expected = 4;
 
-    let actual = problem.wordCount("Cowboys Suck Go Birds");
+    let actual = problem.wordCount("Not an Eagles Fan");
 
     expect(actual).toEqual(expected);
 });
@@ -25,9 +25,9 @@ test("wordCountTest test02", () => {
 test("letterCapitalize test01", () => {
 
     let problem = new Problem();
-    let expected = "Hello From California!";
+    let expected = "Hello From Cybertron!";
 
-    let actual = problem.letterCapitalize("hello from california!");
+    let actual = problem.letterCapitalize("Hello from Cybertron!");
 
     expect(actual).toEqual(expected);
 });
@@ -35,9 +35,9 @@ test("letterCapitalize test01", () => {
 test("letterCapitalize test02", () => {
 
     let problem = new Problem();
-    let expected = "Fly Eagles Fly, Cowboys Suck!";
+    let expected = "G-Town Bears Forever!";
 
-    let actual = problem.letterCapitalize("fly eagles fly, cowboys suck!");
+    let actual = problem.letterCapitalize("G-Town Bears Forever!");
 
     expect(actual).toEqual(expected);
 });
@@ -45,9 +45,9 @@ test("letterCapitalize test02", () => {
 test("firstReverse test01", () => {
 
     let problem = new Problem();
-    let expected = "sredoC dna dlroW olleH";
+    let expected = "STEP ON NO PETS";
 
-    let actual = problem.firstReverse("Hello World and Coders");
+    let actual = problem.firstReverse("STEP ON NO PETS");
 
     expect(actual).toEqual(expected);
 });
@@ -55,9 +55,9 @@ test("firstReverse test01", () => {
 test("firstReverse test02", () => {
 
     let problem = new Problem();
-    let expected =  "eiD syobwoC eiD ,ylF selgaE ylF";
+    let expected =  ".syobwoC ro selgaE rehtieN";
 
-    let actual = problem.firstReverse("Fly Eagles Fly, Die Cowboys Die");
+    let actual = problem.firstReverse("Neither Eagles or Cowboys.");
 
     expect(actual).toEqual(expected);
 });

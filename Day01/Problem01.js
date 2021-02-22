@@ -6,10 +6,8 @@ class Problem {
      * separated by single spaces.
      */
     wordCount(input) {
-        // code goes here
-        return null;
+        return input.split(' ').length;
     }
-
 
     /**
      * Have the function LetterCapitalize(str) take the str parameter being passed and capitalize the first 
@@ -17,7 +15,11 @@ class Problem {
     * 
     */
     letterCapitalize(str) {
-        return null;
+        const newString = str.split(" ");
+        for (let i = 0; i < newString.length; i++) {
+            newString[i] = newString[i][0].toUpperCase() + newString[i].substr(1);
+}
+        return newString.join(" ");
     }
 
 
@@ -29,7 +31,8 @@ class Problem {
      */
 
     firstReverse(input){
-        return null;
+        let revString = input.split('');
+        return revString.reverse().join('');
     }
 
     /**
@@ -39,8 +42,13 @@ class Problem {
      * input will not be empty.
      */
     longestWord(input) {
-        // code goes here
-        return null;
+        let longString = input.split(/\s*\b\s*/);
+        let longestStrng = longString.sort(
+            (strA, strB) => {
+                return strB.length - strA.length; 
+            }
+        )
+        return longestStrng[0];
     }
 
     /**
@@ -49,9 +57,13 @@ class Problem {
      * Let numbers and symbols stay the way they are.
      */
     swapCase(str) {
-        // code goes here
-        return null;
-    }
+        let swaped = str.split('').map(a => {
+            return a === a.toUpperCase() ? a.toLowerCase() : a.toUpperCase()
+        })
+      
+        swaped.join('')
+        return ('swaped', swaped.join(''));
+        }
 
 }
 

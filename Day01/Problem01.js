@@ -7,17 +7,28 @@ class Problem {
      */
     wordCount(input) {
         // code goes here
-        return null;
+        //separate input sentence into Words
+        let words = input.split(" ");
+
+        return words.length;
     }
 
 
     /**
-     * Have the function LetterCapitalize(str) take the str parameter being passed and capitalize the first 
+     * Have the function LetterCapitalize(str) take the str parameter being passed and capitalize the first
      letter of each word. Words will be separated by only one space.
-    * 
+    *
     */
     letterCapitalize(str) {
-        return null;
+    let words = str.split(" ");
+    let sentence = "";
+
+    for(let i = 0; i< words.length; i++){
+         words[i] = words[i].charAt(0).toUpperCase()+ words[i].substr(1);
+    }
+
+    sentence = words.join(" ");
+    return sentence;
     }
 
 
@@ -29,7 +40,16 @@ class Problem {
      */
 
     firstReverse(input){
-        return null;
+     //split sentence into letters
+     //reverse letters
+     //join reversed letters
+     //return joined reversed letters
+
+      let letters = input.split("");
+      let reverseLetters = letters.reverse();
+      let stringReversed = reverseLetters.join("");
+
+      return stringReversed;
     }
 
     /**
@@ -40,8 +60,21 @@ class Problem {
      */
     longestWord(input) {
         // code goes here
-        return null;
-    }
+        //Ignore punctuation
+        let noPuncStr = input.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+        let words = noPuncStr.split(" ");
+
+        let longestWord = words[0];
+
+        for(let i = 1; i< words.length; i++ ){
+           if(longestWord.length < words[i].length ){
+               longestWord = words[i];
+           }
+
+        }
+
+      return longestWord;
+     }
 
     /**
      * Have the swapCase(String input) take the input parameter and swap the case of each
@@ -50,7 +83,17 @@ class Problem {
      */
     swapCase(str) {
         // code goes here
-        return null;
+    let letters = str.split("");
+
+    for(let i = 0; i<letters.length; i++){
+        if(letters[i] === letters[i].toLowerCase()){
+            letters[i] = letters[i].toUpperCase();
+        } else {
+            letters[i] = letters[i].toLowerCase();
+        }
+    }
+
+    return letters.join("");
     }
 
 }

@@ -40,7 +40,16 @@ class Problem {
      */
 
     firstReverse(input){
-        return null;
+     //split sentence into letters
+     //reverse letters
+     //join reversed letters
+     //return joined reversed letters
+
+      let letters = input.split("");
+      let reverseLetters = letters.reverse();
+      let stringReversed = reverseLetters.join("");
+
+      return stringReversed;
     }
 
     /**

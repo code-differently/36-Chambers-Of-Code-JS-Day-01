@@ -55,7 +55,7 @@ test("firstReverse test01", () => {
 test("firstReverse test02", () => {
 
     let problem = new Problem();
-    let expected =  "eiD syobwoC eiD ,ylF selgaE ylF";
+    let expected = "eiD syobwoC eiD ,ylF selgaE ylF";
 
     let actual = problem.firstReverse("Fly Eagles Fly, Die Cowboys Die");
 
@@ -87,7 +87,7 @@ test("swapCase test01", () => {
     let problem = new Problem();
     let expected = "hELLO-lol";
 
-    let actual = problem.swapCase("Hello-LOL");
+    let actual = problem.SwapCase("Hello-LOL");
 
     expect(actual).toEqual(expected);
 });
@@ -97,7 +97,7 @@ test("swapCase test02", () => {
     let problem = new Problem();
     let expected = "sUP dude!!?";
 
-    let actual = problem.swapCase("Sup DUDE!!?");
+    let actual = problem.SwapCase("Sup DUDE!!?");
 
     expect(actual).toEqual(expected);
 });

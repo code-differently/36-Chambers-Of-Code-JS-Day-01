@@ -10,5 +10,8 @@
   "license": "ISC",
   "devDependencies": {
     "jest": "^26.4.2"
+  },
+  "dependencies": {
+    "sequelize": "^5.10.1"
   }
 }

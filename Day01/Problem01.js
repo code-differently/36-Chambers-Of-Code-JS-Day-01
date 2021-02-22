@@ -1,13 +1,16 @@
 class Problem {
-        /**
-     * Have the wordCount(input) take the str string parameter being passed
-     * and return the number of words the string contains
-     * (e.g. "Never eat shredded wheat or cake" would return 6). Words will be
-     * separated by single spaces.
-     */
+    /**
+ * Have the wordCount(input) take the str string parameter being passed
+ * and return the number of words the string contains
+ * (e.g. "Never eat shredded wheat or cake" would return 6). Words will be
+ * separated by single spaces.
+ */
+
     wordCount(input) {
+
+        return input.split(" ").length;
         // code goes here
-        return null;
+        // return null;
     }
 
 
@@ -17,7 +20,18 @@ class Problem {
     * 
     */
     letterCapitalize(str) {
-        return null;
+
+
+        let words = str.split(" ");
+
+        for (let i = 0; i < words.length; i++) {
+            words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+        }
+
+        return words.join(" ");
+
+
+
     }
 
 
@@ -28,8 +42,12 @@ class Problem {
      * program should return the string sredoC dna dlroW olleH.
      */
 
-    firstReverse(input){
-        return null;
+    firstReverse(input) {
+
+        return input.split("").reverse().join("");
+
+
+        // return null;
     }
 
     /**
@@ -39,8 +57,16 @@ class Problem {
      * input will not be empty.
      */
     longestWord(input) {
-        // code goes here
-        return null;
+        var str = input.match(/\w[a-z]{0,}/gi);
+        var longest = 0;
+        var word = null;
+        str.forEach(function (str) {
+            if (longest < str.length) {
+                longest = str.length;
+                word = str;
+            }
+        });
+        return word;
     }
 
     /**
@@ -49,8 +75,19 @@ class Problem {
      * Let numbers and symbols stay the way they are.
      */
     swapCase(str) {
+        let newStr = "";
+        for (let i = 0; i < str.length; i++) {
+            if (str[i] === str[i].toLowerCase()) {
+                newStr += str[i].toUpperCase();
+            } else {
+                newStr += str[i].toLowerCase();
+            }
+        }
+        console.log(newStr);
+        return newStr;
+
         // code goes here
-        return null;
+        // return null;
     }
 
 }

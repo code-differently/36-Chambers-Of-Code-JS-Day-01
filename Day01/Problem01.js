@@ -60,8 +60,21 @@ class Problem {
      */
     longestWord(input) {
         // code goes here
-        return null;
-    }
+        //Ignore punctuation
+        let noPuncStr = input.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+        let words = noPuncStr.split(" ");
+
+        let longestWord = words[0];
+
+        for(let i = 1; i< words.length; i++ ){
+           if(longestWord.length < words[i].length ){
+               longestWord = words[i];
+           }
+
+        }
+
+      return longestWord;
+     }
 
     /**
      * Have the swapCase(String input) take the input parameter and swap the case of each

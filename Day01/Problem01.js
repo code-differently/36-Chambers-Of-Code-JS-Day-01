@@ -5,20 +5,36 @@ class Problem {
      * (e.g. "Never eat shredded wheat or cake" would return 6). Words will be
      * separated by single spaces.
      */
-    wordCount(input) {
-        // code goes here
-        return null;
-    }
+        wordCount(input) {
+        //return input.split(' ').length;
+        const inputArr = input.split(' ');
+        return inputArr.length;
+        }
+      
 
-
+    //npm test
+    
     /**
      * Have the function LetterCapitalize(str) take the str parameter being passed and capitalize the first 
      letter of each word. Words will be separated by only one space.
     * 
     */
-    letterCapitalize(str) {
-        return null;
+   letterCapitalize(str) {
+
+    const userInput = str;
+    const wordsOnly = userInput.split(" ");
+
+    for (let i = 0; i < wordsOnly.length; i++) {
+        wordsOnly[i] = wordsOnly[i][0].toUpperCase() + wordsOnly[i].substr(1);
     }
+
+    let newStr = wordsOnly.join(" ");
+  
+    return newStr;
+ }
+
+
+
 
 
 
@@ -28,9 +44,12 @@ class Problem {
      * program should return the string sredoC dna dlroW olleH.
      */
 
-    firstReverse(input){
-        return null;
-    }
+    
+    firstReverse(input) {
+
+        return input.split("").reverse().join("");
+      }
+    
 
     /**
      * Have the longestWord(String input) take the input parameter being passed and return the
@@ -39,20 +58,53 @@ class Problem {
      * input will not be empty.
      */
     longestWord(input) {
-        // code goes here
-        return null;
-    }
+        var str = input.split(/[^A-Za-z]/);
+        var longest = 0;
+        var word = str;
+        for (var i = 0; i <= str.length - 1; i++) {
+          if (longest < str[i].length) {
+            longest = str[i].length;
+            word = str[i];
+          }
+        }
+        return word;
+      }
+         //let regex = /([^A-Z a-z])+/g;
+            //let text = input.replace(regex, "").split(" ");
+           // let longestText = "";
+            //let longestCount = 0;
+            
+            //for(let i = 0; i < text.length; i++){
+            //  if(text[i].length > longestCount){
+            //    longestCount = text[i].length;
+            //    longestText = text[i];
+              
+            //}
+           ///return longestText;
+          //}
+     // }
+
 
     /**
      * Have the swapCase(String input) take the input parameter and swap the case of each
      * character. For example: if str is "Hello World" the output should be hELLO wORLD.
      * Let numbers and symbols stay the way they are.
      */
-    swapCase(str) {
-        // code goes here
-        return null;
+    swapCase(str)    {
+        let newString = "";
+        for (let i = 0; i < str.length; i++) {
+            if (str[i] === str[i].toLowerCase()) {
+                newString += str[i].toUpperCase();
+            } else {
+                newString += str[i].toLowerCase();
+            }
+        }
+
+        return newString;
+
     }
 
 }
+
 
 module.exports = Problem;

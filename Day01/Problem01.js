@@ -7,7 +7,8 @@ class Problem {
      */
     wordCount(input) {
         // code goes here
-        return null;
+        const inputArr = input.split(' ');
+        return inputArr.length;
     }
 
 
@@ -17,10 +18,13 @@ class Problem {
     * 
     */
     letterCapitalize(str) {
-        return null;
+    let capLetters = str.split(' ');
+        for (let i = 0; i < capLetters.length; i++) {
+            capLetters[i] = capLetters[i][0].toUpperCase() + capLetters[i].substr(1);
+         }
+        return capLetters.join(' ');
     }
-
-
+    
 
     /**
      * Have the function firstReverse(String input) take the input parameter being passed and
@@ -29,7 +33,11 @@ class Problem {
      */
 
     firstReverse(input){
-        return null;
+        let reversedString = "";
+        for(let i = input.length - 1; i >= 0; i--) {
+            reversedString += input[i];
+        }
+        return reversedString;
     }
 
     /**
@@ -40,9 +48,19 @@ class Problem {
      */
     longestWord(input) {
         // code goes here
-        return null;
-    }
-
+        let longWord = "";
+        input = input.replace(/[^a-zA-Z0-9]/gi, " ");
+        input = input.split(" ");
+            for (let i = 0; i < input.length; i++) {
+                if (input[i].length > longWord.length) {
+                    longWord = input[i];
+                }
+             }
+            return longWord;
+        }
+            
+    
+    
     /**
      * Have the swapCase(String input) take the input parameter and swap the case of each
      * character. For example: if str is "Hello World" the output should be hELLO wORLD.
@@ -50,9 +68,20 @@ class Problem {
      */
     swapCase(str) {
         // code goes here
-        return null;
+    let letters = str.split("");
+
+    for(let i = 0; i<letters.length; i++){
+        if(letters[i] === letters[i].toLowerCase()){
+            letters[i] = letters[i].toUpperCase();
+        } else {
+            letters[i] = letters[i].toLowerCase();
+        }
+    }
+
+    return letters.join("");
     }
 
 }
+
 
 module.exports = Problem;

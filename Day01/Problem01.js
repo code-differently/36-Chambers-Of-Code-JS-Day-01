@@ -69,7 +69,21 @@ class Problem {
         }
         return word;
       }
-    
+         //let regex = /([^A-Z a-z])+/g;
+            //let text = input.replace(regex, "").split(" ");
+           // let longestText = "";
+            //let longestCount = 0;
+            
+            //for(let i = 0; i < text.length; i++){
+            //  if(text[i].length > longestCount){
+            //    longestCount = text[i].length;
+            //    longestText = text[i];
+              
+            //}
+           ///return longestText;
+          //}
+     // }
+
 
     /**
      * Have the swapCase(String input) take the input parameter and swap the case of each

@@ -101,3 +101,4 @@ test("swapCase test02", () => {
 
     expect(actual).toEqual(expected);
 });
+

@@ -6,8 +6,8 @@ class Problem {
      * separated by single spaces.
      */
     wordCount(input) {
-        // code goes here
-        return null;
+        // we want to split up each word with a space and get the length.
+        return input.split(' ').length;
     }
 
 
@@ -16,8 +16,14 @@ class Problem {
      letter of each word. Words will be separated by only one space.
     * 
     */
-    letterCapitalize(str) {
-        return null;
+    letterCapitalize(input) {
+        // first we have to capitalize the first letter of the first word
+        // using slice and setting it to lowercase will lower case the rest of the word.
+        let capitalizeString = (str) => str[0].toUpperCase() + str.slice(1).toLowerCase();
+        // Then we have to split up all the words entered into an array
+        let words = input.split(' ').map(capitalizeString);
+        let capitalizeAllBeginningLetters = words.join(' ');
+        return capitalizeAllBeginningLetters;
     }
 
 
@@ -29,7 +35,12 @@ class Problem {
      */
 
     firstReverse(input){
-        return null;
+        // we need to convert the input into an array
+        let word = input.split('');
+        // now we have to use the reverse function on the array
+        let reverseStr = word.reverse().join('');
+        // return the reversed array
+        return reverseStr;
     }
 
     /**
@@ -39,8 +50,20 @@ class Problem {
      * input will not be empty.
      */
     longestWord(input) {
-        // code goes here
-        return null;
+        // convert input to an array
+
+      input = input.replace(/[^0-9a-zA-Z ]/g, '');
+        let word = input.split(' ');
+        // using the sort 
+   
+       
+
+        let sortArray = word.sort((strA, strB) => {
+        // the below will move up the largest string in the array and return the largest string inside the aray
+            return strB.length - strA.length;
+        })
+        // we need to make sure we are returning the index of the array [0] for the first word
+        return sortArray[0];
     }
 
     /**
@@ -49,8 +72,12 @@ class Problem {
      * Let numbers and symbols stay the way they are.
      */
     swapCase(str) {
-        // code goes here
-        return null;
+        // code goes her
+        const isUpperCase = (character) => character.toUpperCase() == character;
+
+        return str.split(' ').map( word => {
+           return word.split('').map( c => isUpperCase(c) ? c.toLowerCase() : c.toUpperCase()).join('')
+        }).join(' ');
     }
 
 }

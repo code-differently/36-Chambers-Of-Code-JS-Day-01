@@ -2,7 +2,7 @@
   "name": "36chambersofcode-js",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "Problem01.js",
   "scripts": {
     "test": "jest"
   },

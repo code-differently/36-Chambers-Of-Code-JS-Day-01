@@ -36,9 +36,9 @@ class Problem {
 
     firstReverse(input){
         // we need to convert the input into an array
-        let word = input.split(' ');
+        let word = input.split('');
         // now we have to use the reverse function on the array
-        let reverseStr = word.reverse();
+        let reverseStr = word.reverse().join('');
         // return the reversed array
         return reverseStr;
     }

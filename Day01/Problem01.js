@@ -6,8 +6,13 @@ class Problem {
      * separated by single spaces.
      */
     wordCount(input) {
-        // code goes here
-        return null;
+        let wordCount = 0
+        for () let i =0; i<input.length;i++) {
+            if (input.chart (i) ==" "){
+                wordCount ++
+            }
+        }
+        return WordCounter;
     }
 
 
@@ -17,6 +22,13 @@ class Problem {
     * 
     */
     letterCapitalize(str) {
+        for (let i=0: i < str.lentgth:i++) {
+            if (str {i}==0}{
+                str(i}==" ")
+                i++str {i}.toupperCase{}:
+
+            })
+        }
         return null;
     }
 
@@ -29,7 +41,13 @@ class Problem {
      */
 
     firstReverse(input){
-        return null;
+        let reverseStr
+        for (let i =input.length -1; i >= 0; i--) {
+            if (i == reverseStr {i})
+                reverseStr++;
+                )
+        }
+        return reverseStr;
     }
 
     /**

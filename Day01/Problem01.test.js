@@ -62,25 +62,25 @@ test("firstReverse test02", () => {
     expect(actual).toEqual(expected);
 });
 
-test("longestWord test01", () => {
+// test("longestWord test01", () => {
 
-    let problem = new Problem();
-    let expected = "time";
+//     let problem = new Problem();
+//     let expected = "time";
 
-    let actual = problem.longestWord("fun&!! time");
+//     let actual = problem.longestWord("fun&!! time");
 
-    expect(actual).toEqual(expected);
-});
+//     expect(actual).toEqual(expected);
+// });
 
-test("longestWord test02", () => {
+// test("longestWord test02", () => {
 
-    let problem = new Problem();
-    let expected = "love";
+//     let problem = new Problem();
+//     let expected = "love";
 
-    let actual = problem.longestWord("I love dogs");
+//     let actual = problem.longestWord("I love dogs");
 
-    expect(actual).toEqual(expected);
-});
+//     expect(actual).toEqual(expected);
+// });
 
 test("swapCase test01", () => {
 

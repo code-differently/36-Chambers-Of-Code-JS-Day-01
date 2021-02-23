@@ -5,9 +5,22 @@ class Problem {
      * (e.g. "Never eat shredded wheat or cake" would return 6). Words will be
      * separated by single spaces.
      */
-    wordCount(input) {
-        // code goes here
-        return null;
+    wordCount(input){
+        // create a variable to hold the output and start at 1
+        let output = 1
+        // create a loop the runs through the string
+        for(let i = 0; i < input.length; i ++){
+        // start loop at begining of string
+        // have the loop check for empty spaces
+            if(input[i-1] === " "){
+        // each space, add 1 to the output.
+                output += 1
+            
+            }
+        // end loop at the end of the given string
+        }
+        // return variable that was created for output
+        return output
     }
 
 
@@ -17,7 +30,27 @@ class Problem {
     * 
     */
     letterCapitalize(str) {
-        return null;
+        // create a variable to contain output
+        let output = ""
+        // create a loop to go through the string
+        for(let i = 0; i < str.length; i ++){
+        // capitalize first index
+            if(i === 0){
+                output += str[i].toUpperCase()
+        // add to variable
+            }
+            else if (str[i-1] === " "){
+        // capitalize the index after each space
+        // add to variable
+                output += str[i].toUpperCase()
+            }
+            else {
+                output += str[i]
+            }
+
+        }
+        // return the output
+        return output;
     }
 
 
@@ -29,7 +62,16 @@ class Problem {
      */
 
     firstReverse(input){
-        return null;
+        // create variable to hold output
+        // create a loop the starts at the end of the string; ends at the begining of string
+        // reverse the order of the string
+        // add to variable
+        // return output
+        let output = ""
+        for(let i = input.length - 1; i >= 0; i --){
+            output += input[i]
+        }
+        return output;
     }
 
     /**
@@ -39,7 +81,17 @@ class Problem {
      * input will not be empty.
      */
     longestWord(input) {
-        // code goes here
+        // create variable to contain output
+        // create a loop to go through each character
+        // split each word by space
+        // create conditional to compare .length of a word to the largest one so far
+        // 
+        // conditional for 2 + words
+        // retunr output
+        let output = ""
+        for(let i = 0; i > input.length; i ++){
+
+        }
         return null;
     }
 
@@ -49,8 +101,25 @@ class Problem {
      * Let numbers and symbols stay the way they are.
      */
     swapCase(str) {
-        // code goes here
-        return null;
+        // create string variable to contain output
+        // create loop that goes through string
+        // check if character is lower or upper
+        // change character to opposite
+        // add change characters to variable along with numbers & symbols
+        // return string variable
+        let output = ""
+        for(let i = 0; i > str.length; i ++){
+            if(str[i] === str[i].toLowerCase()){
+                output += str[i].toUpperCase()
+            }
+            else if(str[i] === str[i].toUpperCase){
+                output += str[i].toLowerCase()
+            }
+            else {
+                output += str[i]
+            }
+        }
+        return output;
     }
 
 }

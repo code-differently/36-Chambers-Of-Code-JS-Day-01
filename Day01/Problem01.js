@@ -15,7 +15,7 @@ class Problem {
             if(input[i-1] === " "){
         // each space, add 1 to the output.
                 output += 1
-                console.log(output)
+            
             }
         // end loop at the end of the given string
         }
@@ -63,12 +63,15 @@ class Problem {
 
     firstReverse(input){
         // create variable to hold output
-        // create a loop the starts at begining of string; ends at the end of string
+        // create a loop the starts at the end of the string; ends at the begining of string
         // reverse the order of the string
         // add to variable
         // return output
-
-        return null;
+        let output = ""
+        for(let i = input.length - 1; i >= 0; i --){
+            output += input[i]
+        }
+        return output;
     }
 
     /**
@@ -79,11 +82,16 @@ class Problem {
      */
     longestWord(input) {
         // create variable to contain output
-        // create a loop togo through each character
+        // create a loop to go through each character
         // split each word by space
-        // create conditional to compare .length of each word
+        // create conditional to compare .length of a word to the largest one so far
+        // 
         // conditional for 2 + words
         // retunr output
+        let output = ""
+        for(let i = 0; i > input.length; i ++){
+
+        }
         return null;
     }
 
@@ -99,7 +107,19 @@ class Problem {
         // change character to opposite
         // add change characters to variable along with numbers & symbols
         // return string variable
-        return null;
+        let output = ""
+        for(let i = 0; i > str.length; i ++){
+            if(str[i] === str[i].toLowerCase()){
+                output += str[i].toUpperCase()
+            }
+            else if(str[i] === str[i].toUpperCase){
+                output += str[i].toLowerCase()
+            }
+            else {
+                output += str[i]
+            }
+        }
+        return output;
     }
 
 }

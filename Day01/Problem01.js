@@ -6,8 +6,8 @@ class Problem {
      * separated by single spaces.
      */
     wordCount(input) {
-        // code goes here
-        return null;
+        let words = input.split(' ');
+        return words.length; // code goes here
     }
 
 
@@ -17,7 +17,13 @@ class Problem {
     * 
     */
     letterCapitalize(str) {
-        return null;
+        let words = str.split(' ');
+
+        for ( let i = 0 ; i < words.length ; i++ ) {
+            words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+        };
+
+        return words.join(' ');
     }
 
 
@@ -29,7 +35,12 @@ class Problem {
      */
 
     firstReverse(input){
-        return null;
+        let words = input.split('');
+        words.reverse();
+        // for ( let i = words.length ; i >= 0 ; i-- ) {
+        //     reverse += words[i];
+        // };
+        return words.join('');
     }
 
     /**
@@ -40,7 +51,25 @@ class Problem {
      */
     longestWord(input) {
         // code goes here
-        return null;
+        input = input.replace(/[^a-zA-Z0-9]/gi, ' ');
+        let words = input.split(' ');
+        let longestLength = 0;
+        let longestWords = [];
+
+        for ( let i = 0 ; i < words.length ; i++ ) {
+            if ( words[i].length > longestLength ) {
+                longestLength = words[i].length;
+            }
+        };
+
+        for ( let i = 0 ; i < words.length ; i++ ) {
+            if (words[i].length === longestLength) {
+                longestWords.push(words[i]);
+            }
+        };
+
+
+        return longestWords[0];
     }
 
     /**
@@ -50,9 +79,20 @@ class Problem {
      */
     swapCase(str) {
         // code goes here
-        return null;
+            let swapped = "";
+            for ( var i = 0 ; i < str.length ; i++ ){
+
+                if ( str[i] === str[i].toLowerCase()){
+                    swapped += str[i].toUpperCase();
+
+                } else {
+                    swapped += str[i].toLowerCase();
+                }
+            }
+
+            return swapped;
+        }   
     }
 
-}
 
 module.exports = Problem;

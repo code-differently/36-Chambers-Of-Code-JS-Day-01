@@ -7,7 +7,8 @@ class Problem {
      */
     wordCount(input) {
         // code goes here
-        return null;
+        var inputWordLength = input.split(" ");
+        return inputWordLength.length;
     }
 
 
@@ -17,7 +18,12 @@ class Problem {
     * 
     */
     letterCapitalize(str) {
-        return null;
+        var space = str.split(" ");
+        for (let i = 0; i < space.length; i++) {
+            space[i] = space[i][0].toUpperCase() + space[i].substr(1);
+        }
+
+        return space.join(" ");
     }
 
 
@@ -29,7 +35,7 @@ class Problem {
      */
 
     firstReverse(input){
-        return null;
+        return  input.split('').reverse().join('');
     }
 
     /**
@@ -40,7 +46,16 @@ class Problem {
      */
     longestWord(input) {
         // code goes here
-        return null;
+        var str = input.match(/\w[a-z]{0,}/gi);
+        var longest = 0;
+        var word = null;
+        str.forEach(function(str) {
+            if (longest < str.length) {
+                longest = str.length;
+                word = str;
+            }
+        });
+        return word;
     }
 
     /**
@@ -50,9 +65,17 @@ class Problem {
      */
     swapCase(str) {
         // code goes here
-        return null;
-    }
+            let newStr = "";
+            for (let i = 0; i < str.length; i++) {
+                if (str[i] === str[i].toLowerCase()) {
+                    newStr += str[i].toUpperCase();
+                } else {
+                    newStr += str[i].toLowerCase();
+                }
+            }
 
-}
+            return newStr;
+        }
+    }    
 
 module.exports = Problem;

@@ -7,6 +7,10 @@ class Problem {
      */
     wordCount(input) {
         // code goes here
+
+    //first convert the sentance to a string
+    //then identify and add the number of spaces in the string and then add one as each word will be identified as 
+    //such by the space that follows it with the exception of the last word which is not followed by a space
         return null;
     }
 
@@ -16,7 +20,11 @@ class Problem {
      letter of each word. Words will be separated by only one space.
     * 
     */
+
     letterCapitalize(str) {
+    //first convert the sentance to a string
+    //then identify spaces
+    //then capitalize the first character in the string and every character after a space
         return null;
     }
 
@@ -28,7 +36,13 @@ class Problem {
      * program should return the string sredoC dna dlroW olleH.
      */
 
+    //
+
+
     firstReverse(input){
+    
+    //take string and index
+    //then reverse order of index numbers to count down instead of up
         return null;
     }
 
@@ -39,7 +53,10 @@ class Problem {
      * input will not be empty.
      */
     longestWord(input) {
-        // code goes here
+
+    //assign values to words by counting the number of characters between spaces
+    //then create a loop comparing each value
+    //return the one or two values that are highest
         return null;
     }
 
@@ -49,7 +66,8 @@ class Problem {
      * Let numbers and symbols stay the way they are.
      */
     swapCase(str) {
-        // code goes here
+    
+    //create an if/else to indicate that if a character is lowercase to change uppercase, else change to lowercase
         return null;
     }
 

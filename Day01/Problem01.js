@@ -6,14 +6,10 @@ class Problem {
      * separated by single spaces.
      */
     wordCount(input) {
-        // code goes here
-
-    //first convert the sentance to a string
-    //then identify and add the number of spaces in the string and then add one as each word will be identified as 
+    //identify and add the number of spaces in the string and then add one as each word will be identified as 
     //such by the space that follows it with the exception of the last word which is not followed by a space
-        return null;
+        return input.split(' ').length;
     }
-
 
     /**
      * Have the function LetterCapitalize(str) take the str parameter being passed and capitalize the first 
@@ -22,11 +18,23 @@ class Problem {
     */
 
     letterCapitalize(str) {
-    //first convert the sentance to a string
-    //then identify spaces
+    //identify spaces
     //then capitalize the first character in the string and every character after a space
-        return null;
-    }
+        var strArr = str.split(' ');
+        var newArr = [];
+      
+        for(var i = 0 ; i < strArr.length ; i++ ){
+      
+          var FirstLetter = strArr[i].charAt(0).toUpperCase();
+          var restOfWord = strArr[i].slice(1);
+      
+          newArr[i] = FirstLetter + restOfWord;
+      
+        }
+      
+        return newArr.join(' ');
+      
+      }
 
 
 

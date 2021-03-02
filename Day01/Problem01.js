@@ -8,7 +8,8 @@ class Problem {
     // Convert string to an array, factoring in space between each word
     // Use split method, and empty string
     wordCount(input) {
-        return str.split("").length;
+        var array = string.split
+        return string.split("").length;
         return null;
     }
 
@@ -18,8 +19,17 @@ class Problem {
      letter of each word. Words will be separated by only one space.
     * 
     */
-   // 
+   // Convert string to an array, factoring in space between each word
+   // Use a for loop to go through each word
+   // Capitalize the 1st letter in each word at the value of 0, using charAt and toUpperCase
+   // Add the remainder of the word, in lower case, using slice method
+   // Convert array back to string
     letterCapitalize(str) {
+        var array = string.split("");
+        for (var i = 0; i < array.length; i++) {
+            array[i].charAt(0).toUpperCase() + array[i].slice(1);
+        }
+        return array.join("");
         return null;
     }
 

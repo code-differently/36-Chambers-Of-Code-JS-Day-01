@@ -6,19 +6,35 @@ class Problem {
      * separated by single spaces.
      */
     wordCount(input) {
-        // code goes here
-        return null;
+    //identify and add the number of spaces in the string and then add one as each word will be identified as 
+    //such by the space that follows it with the exception of the last word which is not followed by a space
+        return input.split(' ').length;
     }
-
 
     /**
      * Have the function LetterCapitalize(str) take the str parameter being passed and capitalize the first 
      letter of each word. Words will be separated by only one space.
     * 
     */
+
     letterCapitalize(str) {
-        return null;
-    }
+    //identify spaces
+    //then capitalize the first character in the string and every character after a space
+        var strArr = str.split(' ');
+        var newArr = [];
+      
+        for(var i = 0 ; i < strArr.length ; i++ ){
+      
+          var FirstLetter = strArr[i].charAt(0).toUpperCase();
+          var restOfWord = strArr[i].slice(1);
+      
+          newArr[i] = FirstLetter + restOfWord;
+      
+        }
+      
+        return newArr.join(' ');
+      
+      }
 
 
 
@@ -28,7 +44,13 @@ class Problem {
      * program should return the string sredoC dna dlroW olleH.
      */
 
+    //
+
+
     firstReverse(input){
+    
+    //take string and index
+    //then reverse order of index numbers to count down instead of up
         return null;
     }
 
@@ -39,7 +61,10 @@ class Problem {
      * input will not be empty.
      */
     longestWord(input) {
-        // code goes here
+
+    //assign values to words by counting the number of characters between spaces
+    //then create a loop comparing each value
+    //return the one or two values that are highest
         return null;
     }
 
@@ -49,7 +74,8 @@ class Problem {
      * Let numbers and symbols stay the way they are.
      */
     swapCase(str) {
-        // code goes here
+    
+    //create an if/else to indicate that if a character is lowercase to change uppercase, else change to lowercase
         return null;
     }
 

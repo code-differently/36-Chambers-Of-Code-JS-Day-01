@@ -5,8 +5,10 @@ class Problem {
      * (e.g. "Never eat shredded wheat or cake" would return 6). Words will be
      * separated by single spaces.
      */
+    // Convert string to an array, factoring in space between each word
+    // Use split method, and empty string
     wordCount(input) {
-        // code goes here
+        return str.split("").length;
         return null;
     }
 
@@ -16,6 +18,7 @@ class Problem {
      letter of each word. Words will be separated by only one space.
     * 
     */
+   // 
     letterCapitalize(str) {
         return null;
     }

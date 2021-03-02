@@ -32,7 +32,7 @@ class Problem {
      let message = "";
      
      for (let i = sentence.length - 1; i>= 0; i--){
-         let character - sentence
+         let character = sentence
      }
         return null;
     }

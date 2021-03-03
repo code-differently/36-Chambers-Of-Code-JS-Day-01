@@ -5,18 +5,31 @@ class Problem {
      * (e.g. "Never eat shredded wheat or cake" would return 6). Words will be
      * separated by single spaces.
      */
-    wordCount(input) {
-        // code goes here
+    // Convert string to an array, factoring in space between each word
+    // Use split method, and empty string
+    WordCount(String) {
+        var str = "Never eat shredded wheat or cake"
+        var res = string.split(""); //(This didn't work, and the fix said to delete it, but the test still failed)
+        return string.split("").length;
         return null;
     }
-
 
     /**
      * Have the function LetterCapitalize(str) take the str parameter being passed and capitalize the first 
      letter of each word. Words will be separated by only one space.
     * 
     */
+   // Convert string to an array, factoring in space between each word
+   // Use a for loop to go through each word
+   // Capitalize the 1st letter in each word at the value of 0, using charAt and toUpperCase
+   // Add the remainder of the word, in lower case, using slice method
+   // Convert array back to string
     letterCapitalize(str) {
+        var array = string.split("");
+        for (var i = 0; i < array.length; i++) {
+            array[i].charAt(0).toUpperCase() + array[i].slice(1);
+        }
+        return array.join("");
         return null;
     }
 

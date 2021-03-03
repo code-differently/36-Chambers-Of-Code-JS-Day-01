@@ -1,7 +1,6 @@
 {
   "name": "36chambersofcode-js",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest"
@@ -10,5 +9,18 @@
   "license": "ISC",
   "devDependencies": {
     "jest": "^26.4.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/francothomas/36-Chambers-Of-Code-JS-Day-01.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/francothomas/36-Chambers-Of-Code-JS-Day-01/issues"
+  },
+  "homepage": "https://github.com/francothomas/36-Chambers-Of-Code-JS-Day-01#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }

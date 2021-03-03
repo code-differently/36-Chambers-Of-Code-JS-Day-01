@@ -7,12 +7,12 @@ class Problem {
      */
     // Convert string to an array, factoring in space between each word
     // Use split method, and empty string
-    wordCount(input) {
-        var array = string.split
+    WordCount(String) {
+        var str = "Never eat shredded wheat or cake"
+        var res = string.split(""); //(This didn't work, and the fix said to delete it, but the test still failed)
         return string.split("").length;
         return null;
     }
-
 
     /**
      * Have the function LetterCapitalize(str) take the str parameter being passed and capitalize the first 

@@ -6,10 +6,13 @@ class Problem {
      * separated by single spaces.
      */
     wordCount(input) {
-        let wordCount = 0
-        for () let i =0; i<input.length;i++) {
-            if (input.chart (i) ==" "){
-                wordCount ++
+        */    wordCount(input) {
+            // code goes here
+            let string = input.split(' ');
+            let wordLength = string.length;
+            return wordLength;
+        }    /**
+    
             }
         }
         return WordCounter;
@@ -20,17 +23,31 @@ class Problem {
      * Have the function LetterCapitalize(str) take the str parameter being passed and capitalize the first 
      letter of each word. Words will be separated by only one space.
     * 
-    */
-    letterCapitalize(str) {
-        for (let i=0: i < str.lentgth:i++) {
-            if (str {i}==0}{
-                str(i}==" ")
-                i++str {i}.toupperCase{}:
-
-            })
+      letterCapitalize(string) {
+     return string.charAt(0).toUpperCase() + string.slice(1);
+ }
+letterCapitalize(str) {
+ create a variable to contain output
+        let output = ""
+create a loop to go through the string
+    for(let i = 0; i < str.length; i ++){
+capitalize first index
+        if(i === 0){
+            output += str[i].toUpperCase()
+add to variable
         }
-        return null;
+        else if (str[i-1] === " "){
+capitalize the index after each space
+ add to variable
+            output += str[i].toUpperCase()
+        }
+        else {
+            output += str[i]
+        }
     }
+    // return the output
+    return output;
+}
 
 
 
@@ -41,13 +58,10 @@ class Problem {
      */
 
     firstReverse(input){
-        let reverseStr
-        for (let i =input.length -1; i >= 0; i--) {
-            if (i == reverseStr {i})
-                reverseStr++;
-                )
-        }
-        return reverseStr;
+        let splitString = input.split('');
+        let reverseArray = splitString.reverse();
+        let joinArray = reverseArray.join('');
+        return joinArray;
     }
 
     /**
@@ -57,8 +71,17 @@ class Problem {
      * input will not be empty.
      */
     longestWord(input) {
-        // code goes here
-        return null;
+        var str = input.split(/[^a-zA-Z]/);  // splits string into words & ignores non-letters
+        var longest = 0;
+        var word = str;
+        for (var i = 0; i <= str.length - 1; i++) {  // steps thru array & adjusts count to begin at 0
+            if (longest < str[i].length) {  // compares current longest with word in the array
+                longest = str[i].length;  // longest word is replaced with new longest word
+                word = str[i];  // word is now the longest word
+            }
+        }
+        return word;
+    }
     }
 
     /**
@@ -68,9 +91,15 @@ class Problem {
      */
     swapCase(str) {
         // code goes here
-        return null;
+        var newLetters = "";
+    for(var i = 0; i<str.length; i++){
+        if(str[i] === str[i].toLowerCase()){
+            newLetters += str[i].toUpperCase();
+        }else {
+            newLetters += str[i].toLowerCase();
+        }
     }
-
-}
+    console.log(newLetters);
+    return newLetters;
 
 module.exports = Problem;

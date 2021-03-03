@@ -5,14 +5,13 @@ class Problem {
      * (e.g. "Never eat shredded wheat or cake" would return 6). Words will be
      * separated by single spaces.
      */
-    wordCount(input) {
-        let wordCount = 0
-        for () let i =0; i<input.length;i++) {
-            if (input.chart (i) ==" "){
-                wordCount ++
-            }
+
+        wordCount(input) {
+            // code goes here
+            let string = input.split(' ');
+            let wordLength = string.length;
+            return wordLength;
         }
-        return WordCounter;
     }
 
 
@@ -74,6 +73,25 @@ class Problem {
             }
         }
         return longestWord;
+
+        longest = str => {
+           let words = str.split(" ");
+            let size = 0;
+            let max = [" "];
+             for (let i = 0; i < words.length; i++) {
+              if (words[i].length > size) {
+                size = words[i].length;
+              }
+              if (max[max.length - 1].length < words[i].length) {
+                max = [];
+                max.push(words[i]);
+              } else {
+                max = [...max, words[i]];
+              }
+            }
+            return max;
+          };
+          
     }
 
               return sen;
